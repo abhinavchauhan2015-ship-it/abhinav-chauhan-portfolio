@@ -1,6 +1,6 @@
 # Abhinav Chauhan — Personal Portfolio
 
-Job-hunt portfolio for Abhinav Chauhan (Principal SDET / Quality Engineering Leader).
+Personal site for Abhinav Chauhan (Principal SDET / Quality Engineering Leader).
 
 ## Stack
 
