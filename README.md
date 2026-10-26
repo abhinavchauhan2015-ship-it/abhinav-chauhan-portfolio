@@ -5,8 +5,8 @@ Personal site for Abhinav Chauhan (Principal SDET / Quality Engineering Leader).
 ## Stack
 
 - Vite + vanilla HTML / CSS / JS
-- Google Fonts: Unbounded, Syne, IBM Plex Mono
-- Netlify-ready (`netlify.toml`, `public/_redirects`)
+- Fonts: Instrument Serif, Outfit, JetBrains Mono
+- Netlify-ready (`netlify.toml`)
 
 ## Local
 
@@ -15,30 +15,9 @@ npm install
 npm run dev
 ```
 
-Production build:
+## Deploy (Netlify)
 
-```bash
-npm run build
-npm run preview
-```
+- Build: `npm run build`
+- Publish: `dist`
 
-## Deploy to Netlify
-
-1. Push this folder to a GitHub repo (or use Netlify CLI / drag-and-drop).
-2. In Netlify: **Add new site → Import from Git** (or **Deploy manually**).
-3. Build settings (also in `netlify.toml`):
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-4. Deploy. Point a custom domain when ready.
-
-### Manual drag-and-drop
-
-```bash
-npm run build
-```
-
-Zip the `dist/` folder and drop it on [app.netlify.com/drop](https://app.netlify.com/drop).
-
-## Content source
-
-Copy and roles are taken from Abhinav’s resume. No invented employers or metrics.
+Or import https://github.com/abhinavchauhan2015-ship-it/abhinav-chauhan-portfolio from Git.

@@ -20,20 +20,31 @@ if (toggle && nav) {
   });
 }
 
-const sections = document.querySelectorAll(".section");
+const chapters = document.querySelectorAll(".chapter-block");
 if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
+  const chapterObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
-          observer.unobserve(entry.target);
+          chapterObserver.unobserve(entry.target);
         }
       });
     },
-    { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+    { rootMargin: "0px 0px -10% 0px", threshold: 0.08 }
   );
-  sections.forEach((section) => observer.observe(section));
+  chapters.forEach((section) => chapterObserver.observe(section));
+
+  const cases = document.querySelectorAll(".case");
+  const caseObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-active", entry.isIntersecting);
+      });
+    },
+    { rootMargin: "-35% 0px -45% 0px", threshold: 0 }
+  );
+  cases.forEach((item) => caseObserver.observe(item));
 } else {
-  sections.forEach((section) => section.classList.add("in-view"));
+  chapters.forEach((section) => section.classList.add("in-view"));
 }
